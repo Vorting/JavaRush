@@ -1,6 +1,6 @@
 package JavaSyntax.lection2;
 
-public class Salary {
+public class SalaryDemo {
 
 
     public static void main(String[] args) {
