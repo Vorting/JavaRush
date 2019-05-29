@@ -1,4 +1,4 @@
-package lvl2.lection2;
+package JavaSyntax.lection2;
 
 public class Salary {
 

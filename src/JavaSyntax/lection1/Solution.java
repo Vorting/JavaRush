@@ -1,4 +1,4 @@
-package lvl2.lection1;
+package JavaSyntax.lection1;
 // It`s a first exercises from JavaRush
 
 public class Solution {
