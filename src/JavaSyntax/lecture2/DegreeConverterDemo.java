@@ -1,4 +1,4 @@
-package JavaSyntax.lection2;
+package JavaSyntax.lecture2;
 
 
 /*формула: ( °C × 9/5) + 32 =  °F

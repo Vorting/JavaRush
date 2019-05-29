@@ -1,4 +1,4 @@
-package JavaSyntax.lection2;
+package JavaSyntax.lecture2;
 
 public class PersonDemo {
     public static void main(String[] args) {
