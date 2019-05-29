@@ -1,4 +1,5 @@
 package lvl2;
+// It`s a first exercises from JavaRush
 
 public class Solution {
     public static void main(String[] args) {
