@@ -7,7 +7,8 @@ public class MoonWeightDemo {
     }
 
     public static double getWeight(int earthWeight) {
+        double on_moon = 0.17;
 
-        return 0;
+        return earthWeight*on_moon;
     }
 }
