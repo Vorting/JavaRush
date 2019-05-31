@@ -7,11 +7,11 @@ public class MinV2Demo {
 
         min = a;
 
-        if (a < min) {
+        if (a < b && a < c) {
             min = a;
-        } else if (b < min ) {
+        } else if (b < a && b < c) {
             min = b;
-        } else if (c < min) {
+        } else if (c <= a && c <= b) {
             min = c;
         }
         return min;
@@ -21,6 +21,7 @@ public class MinV2Demo {
         System.out.println(min(1, 2, 3));
         System.out.println(min(-1, -2, -3));
         System.out.println(min(3, 5, 3));
-        System.out.println(min(5, 5, 10));
+        System.out.println(min(2, 1, 1)); // по этой строчке поймем получилось или нет)
+
     }
 }
