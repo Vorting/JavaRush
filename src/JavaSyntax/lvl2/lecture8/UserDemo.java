@@ -1,4 +1,4 @@
-package JavaSyntax.lecture8;
+package JavaSyntax.lvl2.lecture8;
 
 public class UserDemo {
 
@@ -39,5 +39,4 @@ public class UserDemo {
         System.out.println("№3: "+userDemo3.userName + ", user height is " + userDemo2.userHeight);
         System.out.println("№4: "+userDemo4.userName + ", user height is " + userDemo4.userHeight + ", user age is " + userDemo4.userAge);
     }
-
 }

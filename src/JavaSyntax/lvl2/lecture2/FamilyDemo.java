@@ -1,4 +1,4 @@
-package JavaSyntax.lecture2;
+package JavaSyntax.lvl2.lecture2;
 
 public class FamilyDemo {
     public static void main(String[] args) {

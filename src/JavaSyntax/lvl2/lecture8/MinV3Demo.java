@@ -1,4 +1,4 @@
-package JavaSyntax.lecture8;
+package JavaSyntax.lvl2.lecture8;
 
 public class MinV3Demo {
     public static void main(String[] args) {

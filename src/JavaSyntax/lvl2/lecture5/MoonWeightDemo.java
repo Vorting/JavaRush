@@ -1,4 +1,4 @@
-package JavaSyntax.lecture5;
+package JavaSyntax.lvl2.lecture5;
 
 public class MoonWeightDemo {
     public static void main(String[] args) {
