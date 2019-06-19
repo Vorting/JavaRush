@@ -1,4 +1,4 @@
-package JavaSyntax.lvl3.lecture7;
+package JavaSyntax.lvl3.lecture8;
 
 public class CentimetersDemo {
     public static void main(String[] args) {

@@ -1,4 +1,4 @@
-package JavaSyntax.lvl3.lecture7;
+package JavaSyntax.lvl3.lecture8;
 
 import java.io.BufferedReader;
 import java.io.InputStreamReader;
