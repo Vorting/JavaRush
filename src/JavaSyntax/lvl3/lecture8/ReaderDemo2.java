@@ -10,7 +10,6 @@ public class ReaderDemo2 {
         String name = reader.readLine();
         int num1 = Integer.parseInt(reader.readLine());
         int num2 = Integer.parseInt(reader.readLine());
-
         System.out.println(name + " получает " + num1 + " через " + num2 + " лет.");
     }
 }
