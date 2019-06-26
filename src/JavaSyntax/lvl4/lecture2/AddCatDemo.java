@@ -1,4 +1,4 @@
-package JavaSyntax.lvl4;
+package JavaSyntax.lvl4.lecture2;
 
 public class AddCatDemo {
     private static int catsCount = 0;

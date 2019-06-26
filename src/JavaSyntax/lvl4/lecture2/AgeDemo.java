@@ -1,4 +1,4 @@
-package JavaSyntax.lvl4;
+package JavaSyntax.lvl4.lecture2;
 
 public class AgeDemo {
     public static void main(String[] args) {
