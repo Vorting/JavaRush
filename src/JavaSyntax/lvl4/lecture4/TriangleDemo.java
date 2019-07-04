@@ -31,10 +31,10 @@ public class TriangleDemo {
         sum_A_C = a + c;
         int sum_B_C;
         sum_B_C = b + c;
-        if (sum_B_C > a && sum_A_C > b && sum_A_B > c) {
-            System.out.println("Треугольник существует.");
-        } else {
+        if (a >= sum_B_C || b >= sum_A_C || c >= sum_A_B) {
             System.out.println("Треугольник не существует.");
+        } else if (sum_B_C > a && sum_A_C > b && sum_A_B > c) {
+            System.out.println("Треугольник существует.");
         }
     }
 }
