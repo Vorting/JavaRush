@@ -12,7 +12,6 @@ public class ThreeNumbersSortDemo {
 
         BufferedReader reader = new BufferedReader(new InputStreamReader(System.in));
 
-
         String n1 = reader.readLine();
         int number1 = Integer.parseInt(n1);
 
