@@ -16,7 +16,7 @@ public class CompNumsDemo {
             if (number % 2 == 0) {
                 System.out.println("отрицательное четное число");
             } else {
-                System.out.println("отрицательное нечетное");
+                System.out.println("отрицательное нечетное число");
             }
         }
         if (number > 0) {
