@@ -1,4 +1,4 @@
-package JavaSyntax.lvl4.lecture10;
+package JavaSyntax.lvl4.lecture13;
 
 public class For_even_Demo {
     public static void main(String[] args) {
