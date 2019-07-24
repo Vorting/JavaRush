@@ -8,7 +8,7 @@ public class TriangleDemo {
                 continue;
             }
             for (int j = 0; j <= 10; j++) { // 2-ым циклом перебираем столбцы
-                if (j == i) {
+                if (j == i ) {
                     break;
                 }
                 System.out.print("8");
