@@ -7,20 +7,11 @@ import java.io.InputStreamReader;
 public class ThreeNumbersDemo {
     public static void main(String[] args) throws IOException {
         BufferedReader reader = new BufferedReader(new InputStreamReader(System.in));
-        int n1 = Integer.parseInt(reader.readLine());
-        int n2 = Integer.parseInt(reader.readLine());
-        int n3 = Integer.parseInt(reader.readLine());
+        int a = Integer.parseInt(reader.readLine());
+        int b = Integer.parseInt(reader.readLine());
+        int c = Integer.parseInt(reader.readLine());
 
-        int max = n1;
-        int min = n1;
-        if (n1 < max && (n2 != n1) && (n2 != n3)) {
-            System.out.println(n1);
-        } else if (n2 < n3 && (n1 != n2) && (n3 != n2)) {
-            System.out.println(n2);
-        } else if (n3 < n1 && (n2 != n1) && (n1 != n3)) {
-            System.out.println("среднее число " + n3);
-        }
-
-
+        int mid = (a > b) ? ((c < b) ? b : ((c < a) ? c : a)) : ((a > c) ? a : (b > c) ? c : b);
+        System.out.println(mid);
     }
 }
