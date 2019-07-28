@@ -11,18 +11,32 @@ public class CatsFightDemo {
     public boolean fight(CatsFightDemo anotherCat) {
         int c1 = 0;
         int c2 = 0;
-        if (anotherCat.age > this.age && anotherCat.strength > this.strength && anotherCat.weight > this.weight) {
+        if (this.age > anotherCat.age) {
+            c1++;
+        } else if (this.age == anotherCat.age) {
+            c1++;
             c2++;
+        } else {
             c2++;
+        }
+        if (this.weight > anotherCat.weight) {
+            c1++;
+        } else if (this.weight == anotherCat.weight) {
+            c1++;
             c2++;
+        } else {
+            c2++;
+        }
+        if (this.strength > anotherCat.strength) {
+            c1++;
+        } else if (this.strength == anotherCat.strength) {
+            c1++;
+            c2++;
+        } else {
+            c2++;
+        }
+        if (c1 > c2) {
             return true;
-        } else if (this.age < anotherCat.age && this.strength < anotherCat.strength && this.weight < anotherCat.weight) {
-            c1++;
-            c1++;
-            c1++;
-            return false;
-        } else if (c1 == c2) {
-            return false;
         }
         return false;
     }
