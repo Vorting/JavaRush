@@ -1,7 +1,5 @@
 package JavaSyntax.lvl5.lecture9;
 
-import JavaSyntax.lvl5.lecture7.RectangleDemo;
-
 public class Rectangle2Demo {
 
     private int top;
