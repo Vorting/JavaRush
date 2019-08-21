@@ -8,20 +8,17 @@ public class PiggyBankConsoleDemo {
     public static void main(String[] args) throws IOException {
         BufferedReader reader = new BufferedReader(new InputStreamReader(System.in));
         int nums = Integer.parseInt(reader.readLine());
-        int sum = 0;
-        boolean flag = false;
-
-        do {
-            String stop = reader.readLine();
-            if (stop.equals(' ')) {
+        int sum = 0, answer = 0;
+        while (true) {
+            String s = reader.readLine();
+            for (; nums != 0; nums /= 10) {
+                sum += nums % 10;
+                answer = sum;
+            }
+            if (s.equals("сумма")) {
                 break;
             }
-            for (int i = nums; i != 0; i /= 10) {
-                int tmp = Integer.parseInt(reader.readLine());
-                sum += tmp;
-                flag = true;
-            }
-            System.out.println(sum);
-        } while (!flag);
+        }
+        System.out.println(answer);
     }
 }
