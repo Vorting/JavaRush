@@ -9,16 +9,17 @@ public class PiggyBankConsoleDemo {
         BufferedReader reader = new BufferedReader(new InputStreamReader(System.in));
         int nums = Integer.parseInt(reader.readLine());
         int sum = 0, answer = 0;
-        while (true) {
-            String s = reader.readLine();
-            for (; nums != 0; nums /= 10) {
-                sum += nums % 10;
-                answer = sum;
+
+            while (true) {
+                String s = reader.readLine();
+                for (; nums != 0; nums /= 10) {
+                    sum += nums % 10;
+                    answer = sum;
+                }
+                if (s.equals("сумма")) {
+                    break;
+                }
             }
-            if (s.equals("сумма")) {
-                break;
-            }
-        }
         System.out.println(answer);
     }
 }
