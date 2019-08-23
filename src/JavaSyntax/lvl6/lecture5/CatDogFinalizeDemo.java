@@ -4,13 +4,10 @@ public class CatDogFinalizeDemo {
 
     public static void main(String[] args) throws Throwable {
 
-
         for (int i = 0; i < 50_000; i++) {
-
             Cat2 cat = new Cat2();
             Dog2 dog = new Dog2();
         }
-
     }
 }
 
@@ -28,7 +25,6 @@ class Dog2 {
         super.finalize();
         System.out.println("A Dog was destroyed");
     }
-
 
 //==================================
 //int count = 0;
