@@ -2,27 +2,29 @@ package JavaSyntax.lvl6.lecture8;
 
 public class StringDemo {
     public static void main(String[] args) {
-
+        StringHelper test = new StringHelper();
+        test.multiply("Амиго 1", 5);
+        test.multiply("Амиго 2");
     }
 
-    public static String multiply(String s) {
-        String result = "";
-        //напишите тут ваш код
-        for (int i = 0; i < 5; i++) {
-            result += s;
+
+    public static class StringHelper {
+        private static String string;
+        private static int count = 0;
+
+        public static String multiply(String s, int count) {
+            while (count > 0) {
+                System.out.println(s);
+                count--;
+            }
+            return s;
         }
 
-        return result;
-    }
-
-    public static String multiply(String s, int count) {
-        String result = "";
-        //напишите тут ваш код
-        while (count > 0) {
-            result += s;
-            count--;
+        public static String multiply(String s) {
+            for (int i = 0; i < 5; i++) {
+                System.out.println(s);
+            }
+            return s;
         }
-        return result;
     }
-
 }
