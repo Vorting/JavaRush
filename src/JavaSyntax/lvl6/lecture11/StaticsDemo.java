@@ -27,7 +27,6 @@ public class StaticsDemo {
             if (step > 1) {
             }
             return;
-            main(null);
         }
     }
 }
