@@ -11,7 +11,7 @@ public class IncreaseNumDemo {
         BufferedReader reader = new BufferedReader(new InputStreamReader(System.in));
 
         int[] arr = new int[5];
-        int i = 0, j = 0;
+        int i = 0, j;
 
         for (; i < arr.length; i++) {
             arr[i] = Integer.parseInt(reader.readLine());
@@ -24,14 +24,12 @@ public class IncreaseNumDemo {
                     arr[j - 1] = arr[j];
                     arr[j] = start;
                 }
-                System.out.println(arr[j]);
             }
         }
 
         for (i = 0; i < 5; i++) {
             System.out.println(arr[i]);
         }
-
     }
 }
 
