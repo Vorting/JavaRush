@@ -3,23 +3,23 @@ package JavaSyntax.lvl7.lecture4;
 import java.io.BufferedReader;
 import java.io.IOException;
 import java.io.InputStreamReader;
+import java.util.Arrays;
 
 public class ArraysDemo {
-    private static int size = 3;
 
     public static void main(String[] args) throws IOException {
-        String[] arr_strings = new String[size];
-        int[] arr_numbers = new int[size];
         BufferedReader reader = new BufferedReader(new InputStreamReader(System.in));
-        int i = 0;
-        for (; i < arr_strings.length; i++) {
-            arr_strings[i] = String.valueOf(reader.readLine());
+        String[] arr_strings = new String[10];
+        int[] arr_numbers = new int[10];
+        int i;
+
+        for (i = 0; i < arr_strings.length; i++) {
+            arr_strings[i] = reader.readLine();
+            arr_numbers[i] = arr_strings[i].length();
         }
 
-        for (; i < arr_strings.length; i++) {
-            arr_numbers[i] = arr_strings[i].indexOf(i);
+        for (i = 0; i < arr_numbers.length; i++) {
+            System.out.println(arr_strings[i].length());
         }
-        System.out.println(" length" + arr_numbers);
-
     }
 }
