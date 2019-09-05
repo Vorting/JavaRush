@@ -21,5 +21,6 @@ public class ArraysDemo {
         for (i = 0; i < arr_numbers.length; i++) {
             System.out.println(arr_strings[i].length());
         }
+
     }
 }
