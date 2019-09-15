@@ -7,6 +7,7 @@ import java.util.ArrayList;
 
 public class ArrayList_v5Demo {
     public static void main(String[] args) throws IOException {
+
         ArrayList<String> arrayList = new ArrayList<>();
 
         BufferedReader reader = new BufferedReader(new InputStreamReader(System.in));
