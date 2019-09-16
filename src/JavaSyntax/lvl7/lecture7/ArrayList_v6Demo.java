@@ -11,14 +11,27 @@ public class ArrayList_v6Demo {
 
         List<String> arrayList = new ArrayList<>();
         BufferedReader reader = new BufferedReader(new InputStreamReader(System.in));
-        int min_a = 0, max_a = 0, tmp = 0;
 
-        for (int i = 0; i < 10; i++) {
+        for (int i = 0; i < 3; i++) {
             arrayList.add(i, reader.readLine());
         }
 
-        for (int i = 0; i < arrayList.size(); i++) {
-            if () {
+        int min_a = arrayList.get(0).length();
+        int max_a = min_a;
+
+        for (String s : arrayList) {
+            if (s.length() > max_a) {
+                max_a = s.length();
+            }
+            if (s.length() < min_a) {
+                min_a = s.length();
+            }
+        }
+
+        for (String s2 : arrayList) {
+            if (s2.length() == max_a || s2.length() == min_a) {
+                System.out.println(s2);
+                break;
             }
         }
     }
