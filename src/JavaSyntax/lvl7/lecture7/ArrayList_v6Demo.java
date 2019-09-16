@@ -12,7 +12,7 @@ public class ArrayList_v6Demo {
         List<String> arrayList = new ArrayList<>();
         BufferedReader reader = new BufferedReader(new InputStreamReader(System.in));
 
-        for (int i = 0; i < 3; i++) {
+        for (int i = 0; i < 10; i++) {
             arrayList.add(i, reader.readLine());
         }
 
