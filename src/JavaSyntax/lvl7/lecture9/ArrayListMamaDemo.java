@@ -9,11 +9,12 @@ public class ArrayListMamaDemo {
         String exactly = "именно";
 
         textList.add("мама");
-        textList.add(exactly);
         textList.add("мыла");
-        textList.add(exactly);
         textList.add("раму");
-        textList.add(exactly);
+
+        for (int i = 0; i < textList.size(); i += 2) {
+            textList.add(i + 1, exactly);
+        }
 
         for (String s : textList) {
             System.out.println(s);
