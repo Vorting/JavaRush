@@ -3,7 +3,8 @@ package JavaSyntax.lvl7.lecture9;
 import java.util.ArrayList;
 import java.util.List;
 
-public class ArrayListMamaDemo {
+public class
+ArrayListMamaDemo {
     public static void main(String[] args) {
         List<String> textList = new ArrayList<>();
         String exactly = "именно";

@@ -6,26 +6,24 @@ import java.io.InputStreamReader;
 import java.util.ArrayList;
 
 public class ArrayListDoubleDemo {
-    private static BufferedReader reader;
 
     public static void main(String[] args) throws IOException {
-        reader = new BufferedReader(new InputStreamReader(System.in));
-        ArrayList<String> some_arr = new ArrayList<>(3);
+        ArrayList<String> some_arr = new ArrayList<>();
+        BufferedReader reader = new BufferedReader(new InputStreamReader(System.in));
+        for (int i = 0; i < 10; i++) {
+            some_arr.add(reader.readLine());
+        }
         ArrayList<String> result = doubleValues(some_arr);
-
         for (int i = 0; i < result.size(); i++) {
-            System.out.println(result);
+            System.out.println(result.get(i));
         }
     }
 
-
-    public static ArrayList<String> doubleValues(ArrayList<String> list) throws IOException {
-
+    public static ArrayList<String> doubleValues(ArrayList<String> list) {
         for (int i = 0; i < list.size(); i++) {
-            list.add(i, reader.readLine());
+            list.add(i, list.get(i));
+            i++;
         }
-
         return list;
     }
-
 }
