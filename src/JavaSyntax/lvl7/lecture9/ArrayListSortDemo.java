@@ -17,10 +17,11 @@ public class ArrayListSortDemo {
 
         for (int i = 0; i < arrayList.size() - 1; i++) {
             if ((arrayList.get(i).length() <= arrayList.get(i + 1).length())) {
-            } else if (arrayList.get(i).length() != arrayList.get(i + 1).length()) {
-                System.out.println(arrayList.get(i));
+            } else {
+                System.out.println(i + 1);
                 break;
             }
+            reader.close();
         }
     }
 }
