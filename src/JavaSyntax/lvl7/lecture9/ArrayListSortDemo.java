@@ -15,11 +15,13 @@ public class ArrayListSortDemo {
             arrayList.add(reader.readLine());
         }
 
-        for (int i = 0; i < 10; i++) {
-            if (arrayList.get(i).length() <= arrayList.get(i - 1).length()) {
-                System.out.println(i);
+        for (int i = 0; i < arrayList.size() - 1; i++) {
+            if (arrayList.get(i).length() <= arrayList.get(i + 1).length()) {
+            } else {
+                System.out.println(i + 1);
                 break;
             }
+            reader.close();
         }
     }
 }
