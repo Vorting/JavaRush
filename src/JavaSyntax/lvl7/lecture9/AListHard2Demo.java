@@ -28,16 +28,13 @@ public class AListHard2Demo {
 //    }
 
     private static ArrayList<String> fix(ArrayList<String> strings) {
-        for (int i = 0; i < strings.size()-1 ; i++) {
+        for (int i = 0; i < strings.size() - 1; i++) {
             if (strings.get(i).contains("р")) {
                 strings.remove(i);
-                strings.remove(i);
             }
-            if ((strings.get(i).contains("р") && strings.get(i).contains("л")) && strings.get(i).contains("л")) {
+            if (strings.get(i).contains("р") && strings.get(i).contains("л")) {
                 strings.add(i, strings.get(i));
-            }
-            else {
-
+            } else if (!strings.get(i).contains("л") && (!strings.get(i).contains("р"))) {
             }
         }
         return strings;
