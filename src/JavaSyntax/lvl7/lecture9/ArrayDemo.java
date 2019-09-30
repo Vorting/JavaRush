@@ -1,12 +1,11 @@
-package JavaSyntax.lvl7;
+package JavaSyntax.lvl7.lecture9;
 
 import java.io.BufferedReader;
 import java.io.IOException;
 import java.io.InputStreamReader;
 
-public class SwitchArrDemo {
+public class ArrayDemo {
     public static void main(String[] args) throws IOException {
-
         int[] arr = new int[10];
         BufferedReader reader = new BufferedReader(new InputStreamReader(System.in));
         int i = 0;
@@ -19,3 +18,4 @@ public class SwitchArrDemo {
         }
     }
 }
+
