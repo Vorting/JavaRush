@@ -4,28 +4,32 @@ import java.io.BufferedReader;
 import java.io.IOException;
 import java.io.InputStreamReader;
 import java.util.ArrayList;
+import java.util.Scanner;
 
 public class ArrayCat {
     public final static ArrayList<Cat> CATS = new ArrayList<>();
 
     public static void main(String[] args) throws IOException {
         BufferedReader reader = new BufferedReader(new InputStreamReader(System.in));
-
+//        Scanner scanner = new Scanner(System.in);
+        int age = 0;
+        int weight = 0;
+        int tailLength = 0;
         while (true) {
             String name = reader.readLine();
-            int age = 0;
-            int weight = 0;
-            int tail = 0;
-
-            age = Integer.parseInt(reader.readLine());
-            weight = Integer.parseInt(reader.readLine());
-            tail = Integer.parseInt(reader.readLine());
-
+//            String name = scanner.nextLine();
             if (name == null || name.isEmpty()) {
                 break;
             }
+            age = Integer.parseInt(reader.readLine());
+            weight = Integer.parseInt(reader.readLine());
+            tailLength = Integer.parseInt(reader.readLine());
+//            age = scanner.nextInt();
+//            weight = scanner.nextInt();
+//            tailLength = scanner.nextInt();
 
-            Cat cat = new Cat(name, age, weight, tail);
+
+            Cat cat = new Cat(name, age, weight, tailLength);
             CATS.add(cat);
         }
 
@@ -39,10 +43,10 @@ public class ArrayCat {
     }
 
     public static class Cat {
-        private static int age;
-        private static int weight;
-        private static String name;
-        private static int tailLength;
+        private int age;
+        private int weight;
+        private int tailLength;
+        private String name;
 
         public Cat(String name, int age, int weight, int tail) {
             this.name = name;
