@@ -8,6 +8,7 @@ import java.util.ArrayList;
 public class MamaConvertDemo {
     public static void main(String[] args) throws IOException {
         BufferedReader reader = new BufferedReader(new InputStreamReader(System.in));
+
         ArrayList<String> strings = new ArrayList<>();
         while (true) {
             String name = reader.readLine();
@@ -16,10 +17,12 @@ public class MamaConvertDemo {
             }
             strings.add(name);
         }
-        
-        for (String s : convert(strings)) {
+
+        for (String s : convertFix(strings)) {
             System.out.println(s);
         }
+
+
     }
 
     public static ArrayList<String> convert(ArrayList<String> list) {
@@ -29,5 +32,18 @@ public class MamaConvertDemo {
             resultString.add(s.toUpperCase());
         }
         return resultString;
+    }
+
+    public static ArrayList<String> convertFix(ArrayList<String> list) {
+        ArrayList<String> resultFixString = new ArrayList<>();
+        for (int i = 0; i < list.size(); i++) {
+            String s = list.get(i);
+            if (s.length() % 2 != 0) {
+                resultFixString.add(s + " " + s + " " + s);
+            } else {
+                resultFixString.add(s + " " + s);
+            }
+        }
+        return resultFixString;
     }
 }
