@@ -5,13 +5,13 @@ public class HumanDemo {
 
     public static void main(String[] args) {
         Human Dima = new Human("Дмитрий", true, 27);
-        Human Kate = new Human("Катя", false, 21);
-        Human Anzhelika = new Human("Анжелика", false, 21);
-        Human Vlad = new Human("Владислав", true, 24);
+        Human Kate = new Human("Катя", false, 20);
+        Human Anzhelika = new Human("Анжелика", false, 20);
+        Human Vlad = new Human("Владислав", true, 25);
 
-        Human Roman = new Human("Роман", true, 24, Vlad, Kate);
+        Human Roman = new Human("Роман", true, 2, Vlad, Kate);
         Human Igor = new Human("Игорь", true, 5, Vlad, Kate);
-        Human Alex = new Human("Алексей", true, 24, Vlad, Kate);
+        Human Alex = new Human("Алексей", true, 9, Vlad, Kate);
         Human Maria = new Human("Мария", false, 11, Vlad, Kate);
         Human David = new Human("Давид", true, 3, Dima, Anzhelika);
 

@@ -20,8 +20,6 @@ public class MamaConvertDemo {
         for (String s : convertFix(strings)) {
             System.out.println(s);
         }
-
-
     }
 
     public static ArrayList<String> convert(ArrayList<String> list) {
