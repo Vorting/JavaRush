@@ -16,10 +16,12 @@ public class MamaConvertDemo {
             }
             strings.add(name);
         }
-        
-        for (String s : convert(strings)) {
+
+        for (String s : convertFix(strings)) {
             System.out.println(s);
         }
+
+
     }
 
     public static ArrayList<String> convert(ArrayList<String> list) {
@@ -29,5 +31,23 @@ public class MamaConvertDemo {
             resultString.add(s.toUpperCase());
         }
         return resultString;
+    }
+
+    public static ArrayList<String> convertFix(ArrayList<String> list) {
+        ArrayList<String> resultFixString = new ArrayList<>();
+        for (int i = 0; i < list.size(); i++) {
+            String s = list.get(i);
+            if (s.length() % 2 != 0) {
+                int count = 0;
+                while (count != 3) {
+                    resultFixString.add(s);
+                    count++;
+                }
+            } else {
+                resultFixString.add(s);
+                resultFixString.add(s);
+            }
+        }
+        return resultFixString;
     }
 }
