@@ -8,44 +8,26 @@ import java.util.ArrayList;
 public class MamaConvertDemo {
     public static void main(String[] args) throws IOException {
         BufferedReader reader = new BufferedReader(new InputStreamReader(System.in));
-        ArrayList<String> strings = new ArrayList<>();
+
+        ArrayList<String> list = new ArrayList<String>();
         while (true) {
-            String name = reader.readLine();
-            if (name == null || name.isEmpty()) {
-                break;
-            }
-            strings.add(name);
+            String s = reader.readLine();
+            if (s.isEmpty()) break;
+            list.add(s);
         }
 
-        for (String s : convertFix(strings)) {
-            System.out.println(s);
-        }
-    }
-
-    public static ArrayList<String> convert(ArrayList<String> list) {
-        ArrayList<String> resultString = new ArrayList<>();
+        ArrayList<String> listUpperCase = new ArrayList<String>();
         for (int i = 0; i < list.size(); i++) {
             String s = list.get(i);
-            resultString.add(s.toUpperCase());
-        }
-        return resultString;
-    }
-
-    public static ArrayList<String> convertFix(ArrayList<String> list) {
-        ArrayList<String> resultFixString = new ArrayList<>();
-        for (int i = 0; i < list.size(); i++) {
-            String s = list.get(i);
-            if (s.length() % 2 != 0) {
-                int count = 0;
-                while (count != 3) {
-                    resultFixString.add(s);
-                    count++;
-                }
+            if (s.length() % 2 == 0) {
+                listUpperCase.add(i, s + " " + s);
             } else {
-                resultFixString.add(s);
-                resultFixString.add(s);
+                listUpperCase.add(i, s + " " + s + " " + s);
             }
         }
-        return resultFixString;
+
+        for (int i = 0; i < listUpperCase.size(); i++) {
+            System.out.println(listUpperCase.get(i));
+        }
     }
 }
