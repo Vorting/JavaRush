@@ -1,6 +1,5 @@
 package JavaSyntax.lvl8.lecture3;
 
-import java.awt.event.MouseAdapter;
 import java.util.HashMap;
 import java.util.Map;
 
@@ -19,8 +18,10 @@ public class CatDemo {
 
     public static Map<String, Cat> addCatsToMap(String[] cats) {
         Map<String, Cat> catMap = new HashMap<>();
-        catMap.putAll();
-
+        for (int i = 0; i < cats.length; i++) {
+            catMap.put(cats[i], new Cat(cats[i]));
+        }
+        return catMap;
     }
 
     public static class Cat {
@@ -35,6 +36,5 @@ public class CatDemo {
             return name != null ? name.toUpperCase() : null;
         }
     }
+}
 
-}
-}
