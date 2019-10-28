@@ -4,7 +4,7 @@ import java.util.ArrayList;
 import java.util.LinkedList;
 import java.util.List;
 
-public class Get10kDemo {
+public class Get10kV2Demo {
     public static void main(String[] args) {
         System.out.println(getGetTimeInMs(fill(new ArrayList())));
         System.out.println(getGetTimeInMs(fill(new LinkedList())));
