@@ -27,17 +27,15 @@ public class VocabularyDemo {
     }
 
     public static void removeItemFromMap(Map<String, Integer> map) {
-        HashMap<String, Integer> copy = new HashMap<>();
+        Iterator itr = map.entrySet ().iterator();
 
-        Iterator<Map.Entry<String, Integer>> iterator = map.entrySet().iterator();
-
-        while (iterator.hasNext()) {
-            Map.Entry<String, Integer> pair = iterator.next();
-            if (pair.getValue() < 500) {
-                String key = pair.getKey();
-                Integer value = pair.getValue();
-                map.remove(pair.getKey());
-            }
+        Map.Entry pair;
+        Integer a;
+        while (itr.hasNext()) {
+            pair = (Map.Entry) itr.next();
+            a = (Integer) pair.getValue();
+            if (a.compareTo(500) == -1)
+                itr.remove();
         }
     }
 }
