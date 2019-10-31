@@ -6,7 +6,11 @@ import java.util.Map;
 
 public class VocabularyDemo {
     public static void main(String[] args) {
+        Map<String, Integer> hashMap = createMap();
+        removeItemFromMap(hashMap);
 
+        for (Map.Entry<String, Integer> pair : hashMap.entrySet())
+            System.out.println(pair.getKey() + " " + pair.getValue());
     }
 
     public static Map<String, Integer> createMap() {
@@ -27,7 +31,7 @@ public class VocabularyDemo {
     }
 
     public static void removeItemFromMap(Map<String, Integer> map) {
-        Iterator itr = map.entrySet ().iterator();
+        Iterator itr = map.entrySet().iterator();
 
         Map.Entry pair;
         Integer a;
