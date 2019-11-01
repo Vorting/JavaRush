@@ -11,24 +11,22 @@ import java.util.Map;
 
 public class MapDemo {
 
-
     public static void main(String[] args) {
-        Map<String, String> map = new HashMap<>();
-        createMap(map);
-        System.out.println(getCountTheSameFirstName(map, String.valueOf(map)));
 
     }
 
-    public static Map<String, String> createMap(Map<String, String> map) {
+    public static Map<String, String> createMap() {
 
-        map.put("Sinclar", "Bob");
+        Map<String, String> map = new HashMap<>();
+
+        map.put("Sinclar", "Mike");
         map.put("Tyson", "Mike");
         map.put("Cruise", "Tom");
-        map.put("Roth", "Tim");
+        map.put("Roth", "Mike");
         map.put("Capaldi", "Lewis");
         map.put("Karol", "Tina");
-        map.put("Lucas", "George");
-        map.put("Diesel", "Vin");
+        map.put("Lucas", "Karl");
+        map.put("Diesel", "Mike");
         map.put("Markx", "Karl");
         map.put("Chan", "Jackie");
 
@@ -38,28 +36,28 @@ public class MapDemo {
             Map.Entry<String, String> pair = iterator.next();
             String key = pair.getKey();
             String value = pair.getValue();
-            System.out.println(key + " - " + value);
         }
-
         return map;
     }
 
     public static int getCountTheSameFirstName(Map<String, String> map, String name) {
-        Iterator<Map.Entry<String, String>> iterator = map.entrySet().iterator();
+
         int count = 0;
-        while (iterator.hasNext()) {
-            Map.Entry<String, String> pair = iterator.next();
-            String firstName = pair.getValue();
-            if (firstName.equals(name)) {
-                count++;
+        for (String line : map.values()) {
+            if (line.equals(name)) {
+                count += 1;
             }
         }
-
         return count;
     }
 
     public static int getCountTheSameLastName(Map<String, String> map, String lastName) {
-        return Integer.parseInt(lastName);
+        int count2 = 0;
+        for (String line : map.keySet()) {
+            if (line.equals(lastName)) {
+                count2 += 1;
+            }
+        }
+        return count2;
     }
-
 }
