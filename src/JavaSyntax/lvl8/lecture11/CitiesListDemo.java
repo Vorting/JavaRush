@@ -3,27 +3,30 @@ package JavaSyntax.lvl8.lecture11;
 import java.io.BufferedReader;
 import java.io.IOException;
 import java.io.InputStreamReader;
-import java.util.ArrayList;
-import java.util.List;
+import java.util.HashMap;
+import java.util.Map;
 
 public class CitiesListDemo {
     public static void main(String[] args) throws IOException {
         BufferedReader reader = new BufferedReader(new InputStreamReader(System.in));
+        Map<String, String> familiesAndCities = new HashMap<>();
 
-        List<String> list = new ArrayList<>();
         while (true) {
-            String family = reader.readLine();
-            if (family.isEmpty()) {
+
+            String readCity = reader.readLine();
+            if (readCity.isEmpty()) {
                 break;
             }
-            list.add(family);
+            String familyManName = reader.readLine();
+            familiesAndCities.put(readCity, familyManName);
         }
 
-        int houseNumber = Integer.parseInt(reader.readLine());
+        String checkCity = reader.readLine();
 
-        if (0 <= houseNumber && houseNumber < list.size()) {
-            String familyName = list.get(houseNumber);
-            System.out.println(familyName);
+        for (Map.Entry<String, String> pair : familiesAndCities.entrySet()) {
+            if (pair.getKey().equals(checkCity)) {
+                System.out.println(pair.getValue());
+            }
         }
     }
 }
