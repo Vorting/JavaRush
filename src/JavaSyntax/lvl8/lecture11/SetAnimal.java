@@ -42,7 +42,7 @@ public class SetAnimal {
     }
 
     public static void removeCats(Set<Object> pets, Set<Cat> cats) {
-        pets.remove(cats);
+        pets.removeAll(cats);
     }
 
     public static void printPets(Set<Object> pets) {
