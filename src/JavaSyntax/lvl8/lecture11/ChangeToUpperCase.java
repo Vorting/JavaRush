@@ -17,6 +17,6 @@ public class ChangeToUpperCase {
                 changeToCharArray[i + 1] = Character.toUpperCase(changeToCharArray[i + 1]);
         }
         System.out.println(changeToCharArray);
-        }
     }
 }
+
