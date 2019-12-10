@@ -13,21 +13,19 @@ public class TryCatchMethod {
 
     }
 
-    public static void readData() throws CharConversionException, NumberFormatException {
+    public static void readData() {
+
+        BufferedReader reader = new BufferedReader(new InputStreamReader(System.in));
+        List<Integer> numbers = new ArrayList<>();
+
         try {
-            BufferedReader reader = new BufferedReader(new InputStreamReader(System.in));
-            List<String> numbers = new ArrayList<>();
-
-            try {
-                numbers.add(reader.readLine());
-            } catch (IOException ) {
-                e.printStackTrace();
+            while (true) {
+                numbers.add(Integer.parseInt(reader.readLine()));
             }
-
-        } catch (NumberFormatException formatException) {
-            formatException.getMessage();
+        } catch (IOException e) {
+            for (Integer element : numbers) {
+                System.out.println(element);
+            }
         }
-
-
     }
 }
