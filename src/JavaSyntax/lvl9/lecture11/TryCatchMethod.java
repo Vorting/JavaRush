@@ -19,13 +19,13 @@ public class TryCatchMethod {
         List<Integer> numbers = new ArrayList<>();
 
         try {
-            while (true) {
-                numbers.add(Integer.parseInt(reader.readLine()));
-            }
-        } catch (IOException e) {
+            while (numbers.add(Integer.valueOf(reader.readLine()))) ;
+        } catch (NumberFormatException nfe) {
             for (Integer element : numbers) {
                 System.out.println(element);
             }
+        } catch (IOException ioe) {
+
         }
     }
 }
