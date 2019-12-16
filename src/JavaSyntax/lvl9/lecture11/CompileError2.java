@@ -15,7 +15,6 @@ public class CompileError2 {
         } catch (FileNotFoundException e) {
             System.out.println("Файл не существует.");
             sourceFileName = reader.readLine();
-
         }
         String destinationFileName = reader.readLine();
         fileInputStream = getInputStream(sourceFileName);
@@ -25,11 +24,9 @@ public class CompileError2 {
             int data = fileInputStream.read();
             fileOutputStream.write(data);
         }
-
         fileInputStream.close();
         fileOutputStream.close();
     }
-
 
     public static InputStream getInputStream(String fileName) throws IOException {
         return new FileInputStream(fileName);
