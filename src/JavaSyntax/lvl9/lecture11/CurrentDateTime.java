@@ -3,31 +3,25 @@ package JavaSyntax.lvl9.lecture11;
 import java.io.BufferedReader;
 import java.io.IOException;
 import java.io.InputStreamReader;
-import java.text.DateFormat;
+import java.text.ParseException;
 import java.text.SimpleDateFormat;
 import java.util.Date;
-import java.util.zip.DataFormatException;
+import java.util.Locale;
 
 public class CurrentDateTime {
     public static void main(String[] args) throws IOException {
-        Date currentDate = new Date();
-        SimpleDateFormat dateFormat = new SimpleDateFormat();
-        SimpleDateFormat dateFormat2 = new SimpleDateFormat();
 
-        System.out.println("Your current time: " + currentDate);
         BufferedReader reader = new BufferedReader(new InputStreamReader(System.in));
+        String dataInputString = reader.readLine();
+        SimpleDateFormat dateFormat = new SimpleDateFormat("yyyy-mm-dd");
+        Date date = null;
 
-        String savedDate = null;
-        String savedDate2 = null;
         try {
-            savedDate = dateFormat.format(reader.readLine());
-            savedDate = dateFormat2.format(reader.readLine());
-        } catch (IllegalArgumentException e) {
-            System.out.println("Невозможно отформатировать данный объект как дату");
-            savedDate = dateFormat.format(reader.readLine());
-            savedDate2 = dateFormat2.format(reader.readLine());
-            System.out.println("Your typed data: " + savedDate.toUpperCase());
-            System.out.println("Your typed data: " + savedDate2.toUpperCase());
+            date = dateFormat.parse(dataInputString);
+            SimpleDateFormat dateFormat2 = new SimpleDateFormat(" MMM dd, yyyy", Locale.ENGLISH);
+            System.out.println(dateFormat2.format(date).toUpperCase());
+        } catch (ParseException e) {
+            System.out.println(e);
         }
     }
 }
