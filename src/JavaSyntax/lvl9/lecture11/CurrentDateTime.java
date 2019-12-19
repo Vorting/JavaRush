@@ -13,7 +13,7 @@ public class CurrentDateTime {
 
         BufferedReader reader = new BufferedReader(new InputStreamReader(System.in));
         String dataInputString = reader.readLine();
-        SimpleDateFormat dateFormat = new SimpleDateFormat("yyyy-mm-dd");
+        SimpleDateFormat dateFormat = new SimpleDateFormat("yyyy-MM-dd");
         Date date = null;
 
         try {
