@@ -13,38 +13,43 @@ public class AlgorithmsExercise {
         BufferedReader reader = new BufferedReader(new InputStreamReader(System.in));
         List<String> list = new ArrayList<>();
 
-        while (true) {
-            try {
+        try {
+            while (true) {
                 String s = reader.readLine();
                 if (s.isEmpty()) {
                     break;
                 }
                 list.add(s);
-            } catch (IOException e) {
-                e.printStackTrace();
             }
-
-            String[] array = list.toArray(new String[0]);
-            sort(array);
-
-            for (String x : array) {
-                System.out.println(x);
-            }
+        } catch (IOException e) {
+            e.printStackTrace();
         }
 
+        String[] array = list.toArray(new String[0]);
+        sort(array);
+
+        for (String x : array) {
+            System.out.println(x);
+        }
     }
 
     private static void sort(String[] array) {
-        List<Integer> integerList = new ArrayList<>();
+        List<String> integerList = new ArrayList<>();
         List<String> stringList = new ArrayList<>();
 
-        for (int i = 0; i < array.length; i++) {
-            integerList.add(i);
+        if (isNumber(String.valueOf(array))) {
+            for (String integerEl : array) {
+                integerList.add(integerEl);
+            }
+        } else if (isGreaterThan(String.valueOf(integerList), String.valueOf(integerList)){
+            for (String stringEl : array) {
+                stringList.add(stringEl);
+            }
         }
 
-        for (int j = 0; j < array.length; j++) {
-            stringList.add(String.valueOf(j));
-        }
+
+        isGreaterThan(String.valueOf(stringList), String.valueOf(integerList));
+        isNumber(String.valueOf(integerList));
 
     }
 
