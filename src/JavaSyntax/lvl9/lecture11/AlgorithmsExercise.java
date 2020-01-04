@@ -4,8 +4,6 @@ import java.io.BufferedReader;
 import java.io.IOException;
 import java.io.InputStreamReader;
 import java.util.ArrayList;
-import java.util.Arrays;
-import java.util.Collections;
 import java.util.List;
 
 public class AlgorithmsExercise {
@@ -34,22 +32,49 @@ public class AlgorithmsExercise {
     }
 
     private static void sort(String[] array) {
-        List<String> integerList = new ArrayList<>();
+
+        List<Integer> integerList = new ArrayList<>();
         List<String> stringList = new ArrayList<>();
 
-        if (isNumber(String.valueOf(array))) {
-            for (String integerEl : array) {
-                integerList.add(integerEl);
-            }
-        } else if (isGreaterThan(String.valueOf(integerList), String.valueOf(integerList)){
-            for (String stringEl : array) {
-                stringList.add(stringEl);
+        for (String integerEl : array) {
+            if (isNumber(integerEl)) {
+                integerList.add(Integer.valueOf(integerEl));
+            } else {
+                stringList.add(integerEl);
             }
         }
 
+        for (int i = 0; i < stringList.size(); i++) {
+            for (int j = 0; j < stringList.size() - i - 1; j++) {
+                if (isGreaterThan(stringList.get(j), stringList.get(j + 1))) {
+                    String current = stringList.get(j);
+                    stringList.set(j, stringList.get(j + 1));
+                    stringList.set(j + 1, current);
+                }
+            }
+        }
 
-        isGreaterThan(String.valueOf(stringList), String.valueOf(integerList));
-        isNumber(String.valueOf(integerList));
+        for (int i = 0; i < integerList.size(); i++) {
+            for (int j = 0; j < integerList.size() - i - 1; j++) {
+                if (integerList.get(j) < integerList.get(j + 1)) {
+                    int current = integerList.get(j);
+                    integerList.set(j, integerList.get(j + 1));
+                    integerList.set(j + 1, current);
+                }
+            }
+        }
+        int num_idx = 0;
+        int char_idx = 0;
+
+        for (int i = 0; i < array.length; i++) {
+            if (isNumber(array[i])) {
+                array[i] = String.valueOf(integerList.get(num_idx));
+                num_idx++;
+            } else {
+                array[i] = stringList.get(char_idx);
+                char_idx++;
+            }
+        }
 
     }
 
