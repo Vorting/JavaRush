@@ -8,8 +8,8 @@ import java.io.InputStreamReader;
 public class AlgorithmsExercise {
     public static void main(String[] args) throws IOException {
         BufferedReader reader = new BufferedReader(new InputStreamReader(System.in));
-        int[] array = new int[12];
-        for (int i = 0; i < 12; i++) {
+        int[] array = new int[30];
+        for (int i = 0; i < 30; i++) {
             array[i] = Integer.parseInt(reader.readLine());
         }
         sort(array);
@@ -34,9 +34,9 @@ public class AlgorithmsExercise {
 //            System.out.println("half_size = " + half_size);
             half_size /= 2;
         }
-        System.out.println();
-        for (int i = 0; i < array.length; i++) {
-            System.out.print(array[i] + " ");
-        }
+//        System.out.println();
+//        for (int i = 0; i < array.length; i++) {
+//            System.out.print(array[i] + " ");
+//        }
     }
 }
