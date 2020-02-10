@@ -24,18 +24,13 @@ public class MapExample {
 
     public static Map<String, Integer> countWords(ArrayList<String> list) {
         Map<String, Integer> result = new HashMap<>();
-        int increase = 0;
-        for (Map.Entry<String, Integer> entry : result.entrySet()) {
-            String key = entry.getKey();
-            Integer value = entry.getValue();
-
-            if (entry.getKey().equals(key)) {
-                System.out.println(key + ":" + value);
-                increase++;
+        for (String s : list) {
+            if (s.equals(list.contains(s))) {
+                result.put(s, Integer.parseInt(s));
             }
-            System.out.println("слово " + result.get(key) + " встречается "
-                    + result.get(increase) + " раз");
         }
         return result;
     }
 }
+
+
