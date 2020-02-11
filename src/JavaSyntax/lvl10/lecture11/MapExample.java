@@ -24,9 +24,11 @@ public class MapExample {
 
     public static Map<String, Integer> countWords(ArrayList<String> list) {
         Map<String, Integer> result = new HashMap<>();
-        for (String s : list) {
-            if (s.equals(list.contains(s))) {
-                result.put(s, Integer.parseInt(s));
+        for (String search_word : list) {
+            if (result.containsKey(search_word)) {
+                result.put(search_word, result.get(search_word) + 1);
+            } else {
+                result.put(search_word, 1);
             }
         }
         return result;
