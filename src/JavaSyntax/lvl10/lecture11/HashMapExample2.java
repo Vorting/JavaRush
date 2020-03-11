@@ -14,7 +14,7 @@ public class HashMapExample2 {
         Map map = new HashMap();
 
         if (name.isEmpty()) {
-            break;
+
         }
 
 
