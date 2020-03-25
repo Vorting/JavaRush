@@ -1,4 +1,4 @@
-package JavaCore.lecture6;
+package JavaCore;
 
 public class HomePetsDemo {
     public static void main(String[] args) {
