@@ -31,6 +31,4 @@ public class ITCompanyDemo {
 
     public class OfficeManager extends Clerk {
     }
-
-
 }
